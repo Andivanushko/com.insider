@@ -3,7 +3,7 @@ Chrome driver version 87.0.4280.20
 Geckodriver version 0.28.0
 
 ## Run test using command line
-- All tests: 
+- Run all tests: 
 ```shell script
 mvn clean test
 ```
