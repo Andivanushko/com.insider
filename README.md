@@ -7,3 +7,7 @@ Geckodriver version 0.28.0
 - mvn clean -Dtest=SimpleTest#firstTest test
 - mvn clean -Dbrowser.type=firefox test
 - mvn allure:serve
+
+<p align="center">
+    <img src="src/test/resources/TestFailure.png">
+</p>
