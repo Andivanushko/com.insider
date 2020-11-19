@@ -1,6 +1,7 @@
 package com.insider.pages.main;
 
 import com.insider.pages.BasePage;
+import io.qameta.allure.Step;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.PageFactory;
@@ -16,6 +17,7 @@ public class MainPage extends BasePage {
         PageFactory.initElements(getDriver(), this);
     }
 
+    @Step("Open Main page")
     public MainPage open() {
         getDriver().get(getBaseUrl());
         return this;

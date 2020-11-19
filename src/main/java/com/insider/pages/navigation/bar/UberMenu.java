@@ -1,5 +1,6 @@
 package com.insider.pages.navigation.bar;
 
+import io.qameta.allure.Step;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
@@ -17,6 +18,7 @@ public class UberMenu {
         PageFactory.initElements(driver, this);
     }
 
+    @Step("Select 'CAREER' from navigation menu")
     public void selectCareer() {
         if(headerMenu.findElement(By.partialLinkText(CAREER)).isDisplayed()) {
             headerMenu.findElement(By.partialLinkText(CAREER)).click();
