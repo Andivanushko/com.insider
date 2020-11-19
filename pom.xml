@@ -51,10 +51,9 @@
     </dependencies>
 
     <build>
-
         <resources>
             <resource>
-                <directory>ssrc/test/resources</directory>
+                <directory>src/test/resources</directory>
             </resource>
         </resources>
 
