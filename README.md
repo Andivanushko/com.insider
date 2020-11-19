@@ -6,3 +6,4 @@ Geckodriver version 0.28.0
 - mvn clean -Dtest=SimpleTest test
 - mvn clean -Dtest=SimpleTest#firstTest test
 - mvn clean -Dbrowser.type=firefox test
+- mvn allure:serve
