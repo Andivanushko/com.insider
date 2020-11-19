@@ -13,12 +13,10 @@
         <maven.compiler.source>1.8</maven.compiler.source>
         <maven.compiler.target>1.8</maven.compiler.target>
         <selenium.java.version>3.141.5</selenium.java.version>
-        <junit.version>4.13.1</junit.version>
         <apache.commons-lang3.version>3.11</apache.commons-lang3.version>
         <apache.log4j.version>2.14.0</apache.log4j.version>
         <maven-surefire-plugin.version>2.20.1</maven-surefire-plugin.version>
         <aspectj.version>1.8.10</aspectj.version>
-        <allure-junit4.version>2.6.0</allure-junit4.version>
     </properties>
 
     <dependencies>
@@ -29,9 +27,15 @@
         </dependency>
 
         <dependency>
-            <groupId>junit</groupId>
-            <artifactId>junit</artifactId>
-            <version>${junit.version}</version>
+            <groupId>org.testng</groupId>
+            <artifactId>testng</artifactId>
+            <version>7.3.0</version>
+        </dependency>
+
+        <dependency>
+            <groupId>io.qameta.allure</groupId>
+            <artifactId>allure-testng</artifactId>
+            <version>2.13.6</version>
         </dependency>
 
         <dependency>
@@ -51,12 +55,6 @@
             <artifactId>log4j-core</artifactId>
             <version>${apache.log4j.version}</version>
         </dependency>
-
-        <dependency>
-            <groupId>io.qameta.allure</groupId>
-            <artifactId>allure-junit4</artifactId>
-            <version>2.13.6</version>
-        </dependency>
     </dependencies>
 
     <build>
@@ -70,6 +68,7 @@
             <plugin>
                 <groupId>org.apache.maven.plugins</groupId>
                 <artifactId>maven-compiler-plugin</artifactId>
+                <version>3.8.1</version>
                 <configuration>
                     <source>${maven.compiler.source}</source>
                     <target>${maven.compiler.target}</target>
@@ -92,12 +91,6 @@
                 <configuration>
                     <testFailureIgnore>false</testFailureIgnore>
                     <argLine>-javaagent:"${settings.localRepository}/org/aspectj/aspectjweaver/${aspectj.version}/aspectjweaver-${aspectj.version}.jar"</argLine>
-                    <properties>
-                        <property>
-                            <name>listener</name>
-                            <value>io.qameta.allure.junit4.AllureJunit4</value>
-                        </property>
-                    </properties>
                     <systemProperties>
                         <property>
                             <name>allure.results.directory</name>
@@ -115,5 +108,4 @@
             </plugin>
         </plugins>
     </build>
-
 </project>
