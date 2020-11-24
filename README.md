@@ -24,9 +24,14 @@ mvn clean -Dbrowser.type=firefox test
 - mvn allure:serve
 ```
 
+## Allure report for passed test
+<p align="center">
+    <img src="src/test/resources/screenshots/TestPassed.png">
+</p>
+
 ## Allure report for failed test with screen shot and stack trace
 <p align="center">
-    <img src="src/test/resources/screenshots/TestFailure.png">
+    <img src="src/test/resources/screenshots/TestFailed.png">
 </p>
 
 ## If you have a problem with test run from IDE, you need to add config for TestNg runner

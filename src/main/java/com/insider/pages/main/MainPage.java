@@ -11,7 +11,7 @@ import static com.insider.config.Configuration.getBaseUrl;
 public class MainPage extends AbstractPage {
 
     @FindBy(className = "home")
-    private WebElement home;
+    private WebElement homeContent;
 
     public MainPage() {
         PageFactory.initElements(getDriver(), this);
@@ -23,8 +23,7 @@ public class MainPage extends AbstractPage {
         return this;
     }
 
-    public MainPage assertPageLoad() {
-        home.isDisplayed();
-        return this;
+    public boolean isPageLoaded() {
+        return homeContent.isDisplayed();
     }
 }

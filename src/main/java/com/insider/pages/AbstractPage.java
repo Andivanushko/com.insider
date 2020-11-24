@@ -15,12 +15,26 @@ public abstract class AbstractPage {
         return WebDriverProvider.INSTANCE.getDriverInstance();
     }
 
-    public HeaderNavigationMenu headerNavigationMenu() {
+    public WebDriverWait getDriverWait() {
+        return new WebDriverWait(getDriver(), 30);
+    }
+
+    public abstract boolean isPageLoaded();
+
+    public HeaderNavigationMenu getHeaderNavigationMenu() {
         return new HeaderNavigationMenu(getDriver());
     }
 
     public void waitForJSInactivity() {
         final Wait<WebDriver> webDriverWait = new WebDriverWait(getDriver(), TIME_SECONDS_LIMIT);
         webDriverWait.until(condition -> ((JavascriptExecutor) getDriver()).executeScript("return jQuery.active == 0"));
+    }
+
+    public void waitFor(long millis) {
+        try {
+            Thread.sleep(millis);
+        } catch (final InterruptedException e) {
+            e.printStackTrace();
+        }
     }
 }

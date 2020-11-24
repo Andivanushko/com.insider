@@ -15,15 +15,14 @@ public class HeaderNavigationMenu {
     @FindBy(css = "#header-outer .ubermenu")
     private WebElement headerMenu;
 
+
     public HeaderNavigationMenu(WebDriver driver) {
         PageFactory.initElements(driver, this);
     }
 
     @Step("Select 'CAREER' from navigation menu")
     public CareerPage selectCareer() {
-        if(headerMenu.findElement(By.partialLinkText(CAREER)).isDisplayed()) {
-            headerMenu.findElement(By.partialLinkText(CAREER)).click();
-        }
+        headerMenu.findElement(By.partialLinkText(CAREER)).click();
         return new CareerPage();
     }
 }
