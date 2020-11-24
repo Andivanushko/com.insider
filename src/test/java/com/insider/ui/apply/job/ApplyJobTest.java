@@ -17,6 +17,10 @@ public class ApplyJobTest extends BaseTest {
     @Test(description = "Apply for this job test")
     public void applyJobTestTest() {
         mainPage.open()
-                .navigationMenu().selectCareer();
+                .headerNavigationMenu()
+                .selectCareer()
+                .selectJobs()
+                .filterLocation()
+                .filterJobTeams();
     }
 }

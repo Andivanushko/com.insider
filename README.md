@@ -26,5 +26,11 @@ mvn clean -Dbrowser.type=firefox test
 
 ## Allure report for failed test with screen shot and stack trace
 <p align="center">
-    <img src="src/test/resources/TestFailure.png">
+    <img src="src/test/resources/screenshots/TestFailure.png">
+</p>
+
+## If you have a problem with test run from IDE, you need to add config for TestNg runner
+-ea -Dtestng.dtd.http=true
+<p align="center">
+    <img src="src/test/resources/screenshots/TestNG_config.png">
 </p>
