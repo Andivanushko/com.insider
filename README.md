@@ -1,6 +1,11 @@
 # Insider Test Automation
-Chrome driver version 87.0.4280.20
-Geckodriver version 0.28.0
+###Technical stack for our project:
+- Java 8+
+- Selenium Webdriver
+- TestNg
+- Maven
+- Allure 2 
+
 
 ## Run test using command line
 - Run all tests: 
