@@ -1,5 +1,5 @@
 # Insider Test Automation
-###Technical stack for our project:
+Technical stack for our project:
 - Java 8+
 - Selenium Webdriver
 - TestNg
