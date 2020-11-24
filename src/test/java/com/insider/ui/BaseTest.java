@@ -13,7 +13,7 @@ import static com.insider.config.Configuration.getBrowserHeight;
 import static com.insider.config.Configuration.getBrowserWidth;
 
 @Listeners(TestListener.class)
-public class BaseTest {
+public abstract class BaseTest {
 
     private static final Logger LOG = LoggerFactory.getLogger(BaseTest.class);
 

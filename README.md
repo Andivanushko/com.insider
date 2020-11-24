@@ -1,11 +1,11 @@
 # Insider Test Automation
 Technical stack for our project:
 - Java 8+
-- Selenium Webdriver
+- Selenium Webdriver 3
 - TestNg
 - Maven
 - Allure 2 
-
+- RestAssured
 
 ## Run test using command line
 - Run all tests: 

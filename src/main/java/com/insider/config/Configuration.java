@@ -10,6 +10,7 @@ public class Configuration {
     private static final String TEST_ENVIRONMENT_PROPERTY_NAME = "test.environment";
     private static final String BROWSER_WIDTH = "browser.width";
     private static final String BROWSER_HEIGHT = "browser.height";
+    private static final String PET_STORE_ENV = "petstore.environment";
 
     private static String getFileProperty(final String key) {
         return PropertiesHolder.getInstance().getProperty(key);
@@ -29,5 +30,9 @@ public class Configuration {
 
     public static String getBaseUrl() {
         return getFileProperty(TEST_ENVIRONMENT_PROPERTY_NAME);
+    }
+
+    public static String getPetStoreUrl() {
+        return getFileProperty(PET_STORE_ENV);
     }
 }
