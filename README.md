@@ -1,6 +1,6 @@
 # Test Automation Task
 
-Project contains
+Project contains:
 - UI test (com.insider packages)
 - API test (io.petstore packages)
 - Load test (src/test/resources/jmeter/Wildberries Test Plan.jmx)
