@@ -31,6 +31,10 @@ mvn clean -Dtest=SimpleTest#firstTest test
 ```shell script
 mvn clean -Dbrowser.type=firefox test
 ```
+- Specify browser and test:
+```shell script
+mvn clean -Dbrowser.type=firefox -Dtest=SimpleTest#firstTest test
+```
 - Generate Allure report:
 ```shell script
 - mvn allure:serve
