@@ -6,6 +6,7 @@ Technical stack for our project:
 - Maven
 - Allure 2 
 - RestAssured
+- Lombok (install IDEA plugin if you see compilation errors)
 
 ## Run test using command line
 - Run all tests: 
