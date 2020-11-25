@@ -1,4 +1,10 @@
-# Insider Test Automation
+# Test Automation Task
+
+Project contains
+- UI test (com.insider packages)
+- API test (io.petstore packages)
+- Load test (src/test/resources/jmeter/Wildberries Test Plan.jmx)
+
 Technical stack for our project:
 - Java 8+
 - Selenium Webdriver 3
@@ -6,7 +12,7 @@ Technical stack for our project:
 - Maven
 - Allure 2 
 - RestAssured
-- Lombok (install IDEA plugin if you see compilation errors)
+- Lombok (install IDE plugin if you see compilation errors)
 
 ## Run test using command line
 - Run all tests: 
