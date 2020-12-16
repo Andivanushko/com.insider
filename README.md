@@ -29,5 +29,5 @@ mvn clean -Dbrowser.type=firefox -Dtest=SimpleTest#firstTest test
 ```
 - Generate Allure report:
 ```shell script
-- mvn allure:serve
+mvn allure:serve
 ```
