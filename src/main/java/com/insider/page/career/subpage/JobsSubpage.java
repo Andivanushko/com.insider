@@ -1,6 +1,5 @@
 package com.insider.page.career.subpage;
 
-import com.insider.page.apply.job.ApplyJobPage;
 import com.insider.page.career.CareerPage;
 import io.qameta.allure.Step;
 import org.openqa.selenium.By;
@@ -31,12 +30,6 @@ public class JobsSubpage extends CareerPage {
         waitForJSInactivity();
         selectDropdownValue(jobTeamsDropdown, jobTeams);
         return this;
-    }
-
-    @Step
-    public ApplyJobPage openFirstJob() {
-        getAllJobs().stream().findFirst().orElseThrow(() -> new RuntimeException("Could not find any job")).click();
-        return new ApplyJobPage();
     }
 
     public boolean areAllJobsTitleContains(String jobTitle) {

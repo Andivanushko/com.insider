@@ -1,11 +1,7 @@
 package com.insider.page.career;
 
 import com.insider.page.AbstractPage;
-import com.insider.page.career.subpage.CultureSubpage;
 import com.insider.page.career.subpage.JobsSubpage;
-import com.insider.page.career.subpage.LifeAtInsiderSubpage;
-import com.insider.page.career.subpage.LocationsSubpage;
-import com.insider.page.career.subpage.TeamsSubpage;
 import io.qameta.allure.Step;
 import org.openqa.selenium.By;
 import org.openqa.selenium.JavascriptExecutor;
@@ -39,30 +35,6 @@ public class CareerPage extends AbstractPage {
     public JobsSubpage clickJobs() {
         waitAndClick("JOBS");
         return new JobsSubpage();
-    }
-
-    @Step("Click CULTURE in career navigation menu")
-    public CultureSubpage clickCulture() {
-        waitAndClick("CULTURE");
-        return new CultureSubpage();
-    }
-
-    @Step("Click LOCATIONS in career navigation menu")
-    public LocationsSubpage clickLocations() {
-        waitAndClick("LOCATIONS");
-        return new LocationsSubpage();
-    }
-
-    @Step("Click TEAMS in career navigation menu")
-    public TeamsSubpage clickTeams() {
-        waitAndClick("TEAMS");
-        return new TeamsSubpage();
-    }
-
-    @Step("Click LIFE AT INSIDER in career navigation menu")
-    public LifeAtInsiderSubpage clickLifeAtInside() {
-        waitAndClick("LIFE AT INSIDER");
-        return new LifeAtInsiderSubpage();
     }
 
     @Step("Click on scroll to top button")
