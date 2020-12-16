@@ -1,6 +1,6 @@
-package com.insider.pages.navigation.bar;
+package com.insider.page.navigation.bar;
 
-import com.insider.pages.career.CareerPage;
+import com.insider.page.career.CareerPage;
 import io.qameta.allure.Step;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;

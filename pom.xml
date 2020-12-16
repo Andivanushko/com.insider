@@ -5,19 +5,30 @@
     <modelVersion>4.0.0</modelVersion>
 
     <groupId>com.insider</groupId>
-    <artifactId>test-task</artifactId>
-    <version>1.0</version>
+    <artifactId>insider</artifactId>
+    <version>0.0.1</version>
+
+    <description>QA Automation web framework. Java. Selenium. Maven. Allure.</description>
+
+    <developers>
+        <developer>
+            <id>aiva</id>
+            <name>Andrii Ivanushko</name>
+            <email>andivanushko@gmail.com</email>
+            <roles>
+                <role>Software Test Automation Engineer</role>
+            </roles>
+        </developer>
+    </developers>
 
     <properties>
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
-        <maven.compiler.source>1.8</maven.compiler.source>
-        <maven.compiler.target>1.8</maven.compiler.target>
+        <maven.compiler>1.8</maven.compiler>
         <selenium.java.version>3.141.5</selenium.java.version>
         <apache.commons-lang3.version>3.11</apache.commons-lang3.version>
         <apache.log4j.version>2.14.0</apache.log4j.version>
         <maven-surefire-plugin.version>2.20.1</maven-surefire-plugin.version>
         <aspectj.version>1.8.10</aspectj.version>
-        <restassured.version>4.3.2</restassured.version>
         <com.fasterxml.jackson.core.version>2.7.2</com.fasterxml.jackson.core.version>
     </properties>
 
@@ -59,12 +70,6 @@
         </dependency>
 
         <dependency>
-            <groupId>io.rest-assured</groupId>
-            <artifactId>rest-assured</artifactId>
-            <version>${restassured.version}</version>
-        </dependency>
-
-        <dependency>
             <groupId>org.projectlombok</groupId>
             <artifactId>lombok</artifactId>
             <version>1.18.16</version>
@@ -95,8 +100,8 @@
                 <artifactId>maven-compiler-plugin</artifactId>
                 <version>3.8.1</version>
                 <configuration>
-                    <source>${maven.compiler.source}</source>
-                    <target>${maven.compiler.target}</target>
+                    <source>${maven.compiler}</source>
+                    <target>${maven.compiler}</target>
                 </configuration>
             </plugin>
 

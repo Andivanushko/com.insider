@@ -1,6 +1,6 @@
-package com.insider.pages.main;
+package com.insider.page.main;
 
-import com.insider.pages.AbstractPage;
+import com.insider.page.AbstractPage;
 import io.qameta.allure.Step;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;

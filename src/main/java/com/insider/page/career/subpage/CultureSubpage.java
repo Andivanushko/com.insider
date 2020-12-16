@@ -1,6 +1,6 @@
-package com.insider.pages.career.subpage;
+package com.insider.page.career.subpage;
 
-import com.insider.pages.career.CareerPage;
+import com.insider.page.career.CareerPage;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
 

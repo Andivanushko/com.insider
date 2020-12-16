@@ -1,6 +1,6 @@
-package com.insider.pages.apply.job;
+package com.insider.page.apply.job;
 
-import com.insider.pages.AbstractPage;
+import com.insider.page.AbstractPage;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.PageFactory;

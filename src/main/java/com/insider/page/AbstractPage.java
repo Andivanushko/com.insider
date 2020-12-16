@@ -1,7 +1,7 @@
-package com.insider.pages;
+package com.insider.page;
 
 import com.insider.config.WebDriverProvider;
-import com.insider.pages.navigation.bar.HeaderNavigationMenu;
+import com.insider.page.navigation.bar.HeaderNavigationMenu;
 import org.openqa.selenium.JavascriptExecutor;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.support.ui.LoadableComponent;

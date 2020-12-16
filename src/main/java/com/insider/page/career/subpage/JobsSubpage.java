@@ -1,7 +1,7 @@
-package com.insider.pages.career.subpage;
+package com.insider.page.career.subpage;
 
-import com.insider.pages.apply.job.ApplyJobPage;
-import com.insider.pages.career.CareerPage;
+import com.insider.page.apply.job.ApplyJobPage;
+import com.insider.page.career.CareerPage;
 import io.qameta.allure.Step;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebElement;

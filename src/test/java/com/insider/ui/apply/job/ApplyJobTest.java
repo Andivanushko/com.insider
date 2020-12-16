@@ -12,8 +12,12 @@ public class ApplyJobTest extends BaseTest {
     public static final String QUALITY_ASSURANCE = "Quality Assurance";
     public static final String ISTANBUL_TURKEY = "Istanbul, Turkey";
 
-    @Test(description = "Apply for this job test")
-    public void applyJobTestTest() {
+    @Test(description = "Search for Career opportunities")
+    public void searchForCareerOpportunities() {
+        // 1. Navigate to Career page
+        // 2. Select Job menu item
+        // 3. Filter by Office / Departments
+        // 4. Assert positions / department / Location
 
     }
 }

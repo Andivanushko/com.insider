@@ -1,11 +1,11 @@
-package com.insider.pages.career;
+package com.insider.page.career;
 
-import com.insider.pages.AbstractPage;
-import com.insider.pages.career.subpage.CultureSubpage;
-import com.insider.pages.career.subpage.JobsSubpage;
-import com.insider.pages.career.subpage.LifeAtInsiderSubpage;
-import com.insider.pages.career.subpage.LocationsSubpage;
-import com.insider.pages.career.subpage.TeamsSubpage;
+import com.insider.page.AbstractPage;
+import com.insider.page.career.subpage.CultureSubpage;
+import com.insider.page.career.subpage.JobsSubpage;
+import com.insider.page.career.subpage.LifeAtInsiderSubpage;
+import com.insider.page.career.subpage.LocationsSubpage;
+import com.insider.page.career.subpage.TeamsSubpage;
 import io.qameta.allure.Step;
 import org.openqa.selenium.By;
 import org.openqa.selenium.JavascriptExecutor;
