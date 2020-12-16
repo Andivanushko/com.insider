@@ -19,11 +19,6 @@ public class JobsSubpage extends CareerPage {
     @FindBy(className = "jobs-list")
     private WebElement jobsList;
 
-    @Override
-    public boolean isPageLoaded() {
-        return jobsList.isDisplayed();
-    }
-
     @Step("Select {location} location")
     public JobsSubpage selectLocation(String location) {
         waitForJSInactivity();

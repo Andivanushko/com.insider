@@ -9,10 +9,4 @@ public class TeamsSubpage extends CareerPage {
     @FindBy(id = "teams")
     private WebElement teamsContent;
 
-    @Override
-    public boolean isPageLoaded() {
-        waitForJSInactivity();
-        return teamsContent.isDisplayed();
-    }
-
 }

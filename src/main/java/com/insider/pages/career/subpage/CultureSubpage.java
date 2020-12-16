@@ -9,9 +9,4 @@ public class CultureSubpage extends CareerPage {
     @FindBy(id = "culture")
     private WebElement cultureContent;
 
-    @Override
-    public boolean isPageLoaded() {
-        waitForJSInactivity();
-        return cultureContent.isDisplayed();
-    }
 }

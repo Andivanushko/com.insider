@@ -20,8 +20,13 @@ public class ApplyJobPage extends AbstractPage {
     }
 
     @Override
-    public boolean isPageLoaded() {
-        return applyJobContent.isDisplayed();
+    protected void load() {
+
+    }
+
+    @Override
+    protected void isLoaded() throws Error {
+
     }
 
     public String getJobTitle() {

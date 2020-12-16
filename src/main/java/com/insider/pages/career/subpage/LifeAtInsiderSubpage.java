@@ -9,9 +9,4 @@ public class LifeAtInsiderSubpage extends CareerPage {
     @FindBy(id = "locations")
     private WebElement locationsContent;
 
-    @Override
-    public boolean isPageLoaded() {
-        waitForJSInactivity();
-        return locationsContent.isDisplayed();
-    }
 }

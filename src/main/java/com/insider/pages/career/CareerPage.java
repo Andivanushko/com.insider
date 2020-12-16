@@ -26,8 +26,13 @@ public class CareerPage extends AbstractPage {
     }
 
     @Override
-    public boolean isPageLoaded() {
-        return careerContent.isDisplayed();
+    protected void load() {
+
+    }
+
+    @Override
+    protected void isLoaded() throws Error {
+
     }
 
     @Step("Click JOBS in career navigation menu")
@@ -72,12 +77,9 @@ public class CareerPage extends AbstractPage {
     }
 
     public void waitAndClick(String text) {
-        // These waiters were added only to speed down webdriver
-        waitFor(1000);
         WebElement element = careerNav.findElement(By.partialLinkText(text));
         getDriverWait().until(ExpectedConditions.elementToBeClickable(element));
         element.click();
-        waitFor(1000);
     }
 
 }

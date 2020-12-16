@@ -15,7 +15,12 @@ public class SubmitApplicationPage extends AbstractPage {
     }
 
     @Override
-    public boolean isPageLoaded() {
-        return formData.isDisplayed();
+    protected void load() {
+
+    }
+
+    @Override
+    protected void isLoaded() throws Error {
+
     }
 }

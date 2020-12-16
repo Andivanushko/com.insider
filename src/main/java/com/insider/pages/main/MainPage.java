@@ -17,6 +17,16 @@ public class MainPage extends AbstractPage {
         PageFactory.initElements(getDriver(), this);
     }
 
+    @Override
+    protected void load() {
+
+    }
+
+    @Override
+    protected void isLoaded() throws Error {
+
+    }
+
     @Step("Open main page for Insider")
     public MainPage open() {
         getDriver().get(getBaseUrl());

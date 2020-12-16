@@ -1,4 +1,4 @@
-## Technical stack for our project:
+## Technical stack:
 - Java 8+
 - Selenium Webdriver 3
 - TestNg
