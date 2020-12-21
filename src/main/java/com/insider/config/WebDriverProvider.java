@@ -14,7 +14,7 @@ public final class WebDriverProvider {
     public WebDriver getDriverInstance() {
         if (DRIVER.get() == null) {
             DRIVER.set(WebDriverFactory.getDriver(Configuration.getBrowserType()));
-            LOG.info("WebDriver " + Configuration.getBrowserType() + " was created for ");
+            LOG.info("WebDriver " + Configuration.getBrowserType() + " was created");
         }
         return DRIVER.get();
     }

@@ -1,17 +1,16 @@
 package com.insider.page.main;
 
 import com.insider.page.AbstractPage;
+import com.insider.page.career.CareerPage;
 import io.qameta.allure.Step;
-import org.openqa.selenium.WebElement;
-import org.openqa.selenium.support.FindBy;
+import org.openqa.selenium.By;
+import org.openqa.selenium.NoSuchElementException;
 import org.openqa.selenium.support.PageFactory;
 
 import static com.insider.config.Configuration.getBaseUrl;
+import static org.testng.Assert.fail;
 
 public class MainPage extends AbstractPage {
-
-    @FindBy(className = "home")
-    private WebElement homeContent;
 
     public MainPage() {
         PageFactory.initElements(getDriver(), this);
@@ -19,21 +18,27 @@ public class MainPage extends AbstractPage {
 
     @Override
     protected void load() {
-
+        getDriver().get(getBaseUrl());
     }
 
     @Override
     protected void isLoaded() throws Error {
-
+        try {
+            getDriver().findElement(By.className("home"));
+        } catch (NoSuchElementException exception) {
+            fail("Cannot locate main content");
+        }
     }
 
-    @Step("Open main page for Insider")
+    @Step
     public MainPage open() {
-        getDriver().get(getBaseUrl());
+        load();
+        isLoaded();
         return this;
     }
 
-    public boolean isPageLoaded() {
-        return homeContent.isDisplayed();
+    @Step
+    public CareerPage selectCareer() {
+        return getHeaderNavigationMenu().selectCareer();
     }
 }

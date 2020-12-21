@@ -25,11 +25,12 @@
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
         <maven.compiler>1.8</maven.compiler>
         <selenium.java.version>3.141.5</selenium.java.version>
-        <apache.commons-lang3.version>3.11</apache.commons-lang3.version>
+        <apache.commons.lang3.version>3.11</apache.commons.lang3.version>
         <apache.log4j.version>2.14.0</apache.log4j.version>
-        <maven-surefire-plugin.version>2.20.1</maven-surefire-plugin.version>
+        <maven.surefire.plugin.version>2.20.1</maven.surefire.plugin.version>
         <aspectj.version>1.8.10</aspectj.version>
         <com.fasterxml.jackson.core.version>2.7.2</com.fasterxml.jackson.core.version>
+        <assertj.core.version>3.18.1</assertj.core.version>
     </properties>
 
     <dependencies>
@@ -54,7 +55,7 @@
         <dependency>
             <groupId>org.apache.commons</groupId>
             <artifactId>commons-lang3</artifactId>
-            <version>${apache.commons-lang3.version}</version>
+            <version>${apache.commons.lang3.version}</version>
         </dependency>
 
         <dependency>
@@ -80,11 +81,19 @@
             <artifactId>jackson-core</artifactId>
             <version>${com.fasterxml.jackson.core.version}</version>
         </dependency>
+
         <dependency>
             <groupId>com.fasterxml.jackson.core</groupId>
             <artifactId>jackson-databind</artifactId>
             <version>${com.fasterxml.jackson.core.version}</version>
         </dependency>
+
+        <dependency>
+            <groupId>org.assertj</groupId>
+            <artifactId>assertj-core</artifactId>
+            <version>${assertj.core.version}</version>
+        </dependency>
+
     </dependencies>
 
     <build>
@@ -117,7 +126,7 @@
             <plugin>
                 <groupId>org.apache.maven.plugins</groupId>
                 <artifactId>maven-surefire-plugin</artifactId>
-                <version>${maven-surefire-plugin.version}</version>
+                <version>${maven.surefire.plugin.version}</version>
                 <configuration>
                     <testFailureIgnore>false</testFailureIgnore>
                     <argLine>-javaagent:"${settings.localRepository}/org/aspectj/aspectjweaver/${aspectj.version}/aspectjweaver-${aspectj.version}.jar"</argLine>

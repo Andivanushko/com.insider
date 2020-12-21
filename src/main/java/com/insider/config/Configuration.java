@@ -2,8 +2,6 @@ package com.insider.config;
 
 import org.apache.commons.lang3.StringUtils;
 
-import java.awt.*;
-
 public class Configuration {
 
     private static final String BROWSER_TYPE_PROPERTY_NAME = "browser.type";
@@ -23,6 +21,7 @@ public class Configuration {
     public static int getBrowserWidth() {
         return Integer.parseInt(getFileProperty(BROWSER_WIDTH));
     }
+
     public static int getBrowserHeight() {
         return Integer.parseInt(getFileProperty(BROWSER_HEIGHT));
     }

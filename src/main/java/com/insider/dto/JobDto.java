@@ -5,7 +5,7 @@ import lombok.Data;
 
 @Builder
 @Data
-public class Job {
+public class JobDto {
 
     private String position;
     private String department;
