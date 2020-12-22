@@ -1,7 +1,7 @@
 package com.insider.flow;
 
 import com.insider.condition.JobCondition;
-import com.insider.dto.JobDto;
+import com.insider.dto.Job;
 import com.insider.page.career.fragment.JobsFragment;
 import com.insider.page.main.MainPage;
 import io.qameta.allure.Step;
@@ -9,7 +9,7 @@ import io.qameta.allure.Step;
 public class CareerFlow {
 
     @Step("Search for job {job}")
-    public static void searchJob(JobDto job) {
+    public static void searchJob(Job job) {
         new MainPage().open()
                 .selectCareer()
                 .selectJobs()

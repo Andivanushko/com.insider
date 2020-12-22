@@ -1,5 +1,6 @@
-package com.insider.config;
+package com.insider.config.listener;
 
+import com.insider.config.driver.WebDriverProvider;
 import io.qameta.allure.Attachment;
 import org.openqa.selenium.OutputType;
 import org.openqa.selenium.TakesScreenshot;

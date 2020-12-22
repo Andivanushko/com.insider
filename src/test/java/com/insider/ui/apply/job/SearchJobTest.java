@@ -1,7 +1,7 @@
 package com.insider.ui.apply.job;
 
 import com.insider.condition.JobCondition;
-import com.insider.dto.JobDto;
+import com.insider.dto.Job;
 import com.insider.flow.CareerFlow;
 import com.insider.ui.BaseTest;
 import io.qameta.allure.Feature;
@@ -30,7 +30,7 @@ public class SearchJobTest extends BaseTest {
 
     @Test(description = "Search for Career opportunities")
     public void searchForCareerOpportunities() {
-        JobDto job = JobDto.builder()
+        Job job = Job.builder()
                 .location("Istanbul, Turkey")
                 .position("Quality Assurance")
                 .department("Quality Assurance")
@@ -41,7 +41,7 @@ public class SearchJobTest extends BaseTest {
     }
 
     @Step("Verify job position, department and location")
-    private void verifyJobDescription(JobDto job) {
+    private void verifyJobDescription(Job job) {
         JobCondition jobCondition = CareerFlow.getJobCondition();
 
         assertSoftly(softAssertions -> {

@@ -1,8 +1,6 @@
 package com.insider.ui;
 
-import com.insider.config.TestListener;
-import com.insider.config.WebDriverProvider;
-import org.openqa.selenium.Dimension;
+import com.insider.config.listener.TestListener;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.testng.annotations.AfterTest;
@@ -13,20 +11,20 @@ import static com.insider.config.Configuration.getBrowserHeight;
 import static com.insider.config.Configuration.getBrowserWidth;
 
 @Listeners(TestListener.class)
-public abstract class BaseTest {
+public abstract class BaseTest implements TestCase {
 
     private static final Logger LOG = LoggerFactory.getLogger(BaseTest.class);
 
     @BeforeTest(description = "Clear cookies and set browser size")
-    public void cleanCookies() {
-        WebDriverProvider.INSTANCE.getDriverInstance().manage().deleteAllCookies();
-        WebDriverProvider.INSTANCE.getDriverInstance().manage().window().setSize(new Dimension(getBrowserWidth(), getBrowserHeight()));
-        LOG.info("Screen size" + WebDriverProvider.INSTANCE.getDriverInstance().manage().window().getSize());
+    public void beforeTestSetup() {
+        cleanCookies();
+        setBrowserSize(getBrowserWidth(), getBrowserHeight());
+        LOG.info("Screen size" + getDriver().manage().window().getSize());
     }
 
     @AfterTest(description = "Remove driver instance")
-    public void afterClassSetup() {
-        WebDriverProvider.INSTANCE.removeDriver();
+    public void afterTestSetup() {
+        quitDriver();
         LOG.info("WebDriver was successfully closed");
     }
 }

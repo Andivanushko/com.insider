@@ -1,5 +1,6 @@
-package com.insider.config;
+package com.insider.config.driver;
 
+import com.insider.config.Constants;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.chrome.ChromeDriverService;

@@ -1,5 +1,6 @@
-package com.insider.config;
+package com.insider.config.driver;
 
+import com.insider.config.Configuration;
 import org.openqa.selenium.WebDriver;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
@@ -17,10 +18,5 @@ public final class WebDriverProvider {
             LOG.info("WebDriver " + Configuration.getBrowserType() + " was created");
         }
         return DRIVER.get();
-    }
-
-    public void removeDriver() {
-        DRIVER.get().quit();
-        DRIVER.remove();
     }
 }
