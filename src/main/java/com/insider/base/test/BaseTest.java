@@ -1,4 +1,4 @@
-package com.insider.ui;
+package com.insider.base.test;
 
 import com.insider.config.listener.TestListener;
 import org.slf4j.Logger;

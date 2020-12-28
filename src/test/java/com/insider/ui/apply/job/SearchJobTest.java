@@ -1,9 +1,9 @@
 package com.insider.ui.apply.job;
 
+import com.insider.base.test.BaseTest;
 import com.insider.condition.JobCondition;
 import com.insider.dto.Job;
 import com.insider.flow.CareerFlow;
-import com.insider.ui.BaseTest;
 import io.qameta.allure.Feature;
 import io.qameta.allure.Step;
 import io.qameta.allure.Story;
